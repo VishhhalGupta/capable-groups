@@ -2,11 +2,7 @@
 ## Capable Groups Website - Next.js Implementation
 
 **Document Version:** 1.0  
-**Last Updated:** February 2026  
-**Project Manager:** [Your Name]  
-**Tech Lead:** [Your Name]  
-**Designer Lead:** [Your Name]
-
+**Last Updated:** February 2026
 ---
 
 ## 1. EXECUTIVE SUMMARY

@@ -1,0 +1,42 @@
+# Capable Groups Website - Agent Instructions
+
+## Project Context
+You are assisting in the development of the Capable Groups website, a global staffing and IT services agency. The goal is to create a standout, industry-ready, and highly responsive website.
+
+## Tech Stack
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **UI Components:** Aceternity UI, Lucide React
+- **Theming:** next-themes (Light/Dark mode)
+- **Language:** TypeScript
+
+## Brand & Design Requirements
+- **Theme:** Modern, professional, and trustworthy.
+- **Colors:** 
+  - Primary Blue: `#1E3A8A` (900) to `#EFF6FF` (50)
+  - Neutral Grays: `#1E293B` (800) to `#F1F5F9` (100)
+  - Dark Theme Backgrounds: `#0F172A`, `#1E293B`
+- **Typography:** Clean, readable, and accessible.
+- **UI Elements:** Use eye-catching elements like tabs, card stacks, glowing buttons, and shine effects (Aceternity UI style).
+- **Spacing & Positioning:** Ensure proper padding, margins, and alignment. Use a mobile-first approach for responsiveness.
+
+## Development Guidelines
+1. **Component Structure:**
+   - Place reusable UI components in `src/components/ui/` or `src/components/common/`.
+   - Place page sections in `src/components/sections/`.
+2. **Styling:**
+   - Use Tailwind CSS utility classes.
+   - Use `clsx` and `tailwind-merge` for dynamic class names.
+3. **Animations:**
+   - Use Framer Motion for smooth transitions and interactive elements.
+   - Keep animations professional and not overly distracting.
+4. **Code Quality:**
+   - Write clean, modular, and well-documented TypeScript code.
+   - Ensure all components are fully responsive.
+   - Follow accessibility best practices.
+
+## Workflow
+- Always refer to the provided PRD and Design System documents in the `docs/` folder for specific requirements.
+- When asked to create a new section or component, first analyze the requirements, then implement it using the established tech stack and design guidelines.
+- Ensure that the UI matches the reference images provided by the user (e.g., CodeDale website style: clean, modern, with subtle animations and clear typography).

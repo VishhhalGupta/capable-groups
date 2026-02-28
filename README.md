@@ -1,36 +1,55 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Capable Groups Website
+
+This is the official website for Capable Groups, a global staffing and IT services agency. The website is built using Next.js, Tailwind CSS, Framer Motion, and Aceternity UI components.
+
+## Tech Stack
+
+- **Framework:** Next.js (App Router)
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **UI Components:** Aceternity UI, Lucide React
+- **Theming:** next-themes (Light/Dark mode)
+- **Language:** TypeScript
+
+## Project Structure
+
+```
+src/
+├── app/              # Next.js App Router pages and layouts
+├── components/       # Reusable React components
+│   ├── common/       # Basic UI elements (buttons, inputs, etc.)
+│   ├── sections/     # Page sections (Hero, Services, etc.)
+│   └── ui/           # Aceternity UI and complex interactive components
+├── lib/              # Utility functions and helpers
+└── styles/           # Global CSS and Tailwind configuration
+```
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository.
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+3. Run the development server:
+   ```bash
+   npm run dev
+   ```
+4. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Implementation Procedure
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+1. **Setup & Configuration:** Initialized Next.js with Tailwind CSS and TypeScript. Configured absolute imports (`@/*`).
+2. **Design System:** Implemented the color palette, typography, and spacing defined in the PRD using Tailwind configuration and CSS variables.
+3. **Component Architecture:** Built reusable UI components (buttons, cards) and layout components (navbar, footer).
+4. **Page Sections:** Developed individual sections like Hero, Services Grid, Testimonials, etc., using Framer Motion for animations.
+5. **Theming:** Integrated `next-themes` for seamless light and dark mode switching.
+6. **Responsive Design:** Ensured all components are mobile-first and look great across all screen sizes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Development Guidelines
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Use functional components with TypeScript interfaces for props.
+- Prefer Tailwind utility classes for styling.
+- Use Framer Motion for complex animations and transitions.
+- Follow the established folder structure for new components and pages.
+- Ensure accessibility (ARIA attributes, keyboard navigation) for all interactive elements.
