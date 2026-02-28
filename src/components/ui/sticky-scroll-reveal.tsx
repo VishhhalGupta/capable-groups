@@ -18,14 +18,13 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    // uncomment line 22 and comment line 23 if you DONT want the scrollbar to be just the component.
-    // target: ref,
-    container: ref,
-    offset: ["start start", "end start"],
+    target: ref,
+    offset: ["start center", "end start"],
   });
   const cardLength = content.length;
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
+    // Determine breakpoints
     const cardsBreakpoints = content.map((_, index) => index / cardLength);
     const closestBreakpointIndex = cardsBreakpoints.reduce(
       (acc, breakpoint, index) => {
@@ -64,7 +63,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-md p-10"
+      className="flex items-start justify-center relative space-x-10 rounded-md p-10"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -101,7 +100,7 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-60 w-80 rounded-md bg-white sticky top-10 overflow-hidden",
+          "hidden lg:block h-80 w-[24rem] rounded-md bg-white sticky top-32 overflow-hidden",
           contentClassName
         )}
       >

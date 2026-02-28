@@ -40,18 +40,6 @@ const services = [
 export function ServicesSection() {
   return (
     <section className="relative w-full py-24 flex flex-col items-center justify-center bg-white dark:bg-black overflow-hidden">
-      {/* Dot Background */}
-      <div
-        className={cn(
-          "absolute inset-0",
-          "[background-size:20px_20px]",
-          "[background-image:radial-gradient(#ecad10_1px,transparent_1px)]",
-          "dark:[background-image:radial-gradient(#4a96cb_1px,transparent_1px)]",
-          "opacity-20"
-        )}
-      />
-      <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_40%,black)] dark:bg-black"></div>
-      
       <div className="relative z-20 container mx-auto px-4 max-w-7xl">
         <h2 className="text-4xl md:text-5xl font-extrabold text-center mb-16 uppercase tracking-wider text-slate-900 dark:text-white">
           SERVICES
@@ -71,7 +59,7 @@ export function ServicesSection() {
                        alt={service.title} 
                        fill 
                        className="object-contain"
-                       style={{ filter: "invert(48%) sepia(21%) saturate(2220%) hue-rotate(170deg) brightness(97%) contrast(85%)" }} // approximate #4a96cb
+                       style={{ filter: "invert(55%) sepia(37%) saturate(878%) hue-rotate(175deg) brightness(95%) contrast(90%)" }} // approximate #4a96cb
                      />
                   </div>
                   <h3 className="text-xl font-bold text-slate-800 dark:text-white mb-4">

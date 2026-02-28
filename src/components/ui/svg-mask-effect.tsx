@@ -6,7 +6,7 @@ import { cn } from "@/lib/utils";
 export const MaskContainer = ({
   children,
   revealText,
-  size = 10,
+  size = 0,
   revealSize = 600,
   className,
 }: {
@@ -61,7 +61,7 @@ export const MaskContainer = ({
           }px`,
           WebkitMaskSize: `${maskSize}px`,
         } as any}
-        transition={{ type: "tween", ease: "backOut", duration: 0.1 }}
+        transition={{ type: "spring", stiffness: 100, damping: 20 }}
       >
         <div className="absolute inset-0 bg-brand-blue opacity-95" />
         <div

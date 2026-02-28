@@ -29,23 +29,12 @@ export function HeroSection() {
 
   return (
     <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden bg-[#fafafa] dark:bg-[#0a0a0a]">
-      {/* Background Dots Pattern */}
-      {/* Light Mode Dots */}
-      <div 
-        className="absolute inset-0 z-0 dark:hidden opacity-[0.4]"
-        style={{
-          backgroundImage: `radial-gradient(#94a3b8 1.5px, transparent 1.5px)`,
-          backgroundSize: `32px 32px`
-        }}
+      {/* Aceternity UI Dot Background */}
+      <div
+        className={"absolute inset-0 z-0 [background-size:20px_20px] [background-image:radial-gradient(#ecad10_1px,transparent_1px)] dark:[background-image:radial-gradient(#4a96cb_1px,transparent_1px)] opacity-20"}
       />
-      {/* Dark Mode Dots */}
-      <div 
-        className="absolute inset-0 z-0 hidden dark:block opacity-[0.3]"
-        style={{
-          backgroundImage: `radial-gradient(#ffffff 1.5px, transparent 1.5px)`,
-          backgroundSize: `32px 32px`
-        }}
-      />
+      {/* Radial gradient for the container to give a faded look */}
+      <div className="pointer-events-none absolute inset-0 z-0 flex items-center justify-center bg-[#fafafa] dark:bg-[#0a0a0a] [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
       {/* Main Content */}
       <motion.div

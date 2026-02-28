@@ -32,7 +32,7 @@ export const TextHoverEffect = ({
       ref={svgRef}
       width="100%"
       height="100%"
-      viewBox="0 0 300 100"
+      viewBox="0 0 850 140"
       xmlns="http://www.w3.org/2000/svg"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
@@ -49,11 +49,11 @@ export const TextHoverEffect = ({
         >
           {hovered && (
             <>
-              <stop offset="0%" stopColor={"#eab308"} />
-              <stop offset="25%" stopColor={"#ef4444"} />
-              <stop offset="50%" stopColor={"#3b82f6"} />
-              <stop offset="75%" stopColor={"#06b6d4"} />
-              <stop offset="100%" stopColor={"#8b5cf6"} />
+              <stop offset="0%" stopColor={"#ecad10"} />
+              <stop offset="25%" stopColor={"#4a96cb"} />
+              <stop offset="50%" stopColor={"#ecad10"} />
+              <stop offset="75%" stopColor={"#4a96cb"} />
+              <stop offset="100%" stopColor={"#ecad10"} />
             </>
           )}
         </linearGradient>
@@ -86,8 +86,9 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent text-7xl"
+        strokeWidth="1.5"
+        className="font-[helvetica] font-bold stroke-neutral-200 dark:stroke-neutral-800 fill-transparent"
+        fontSize="180"
         style={{ opacity: hovered ? 0.7 : 0 }}
       >
         {text}
@@ -97,8 +98,9 @@ export const TextHoverEffect = ({
         y="50%"
         textAnchor="middle"
         dominantBaseline="middle"
-        strokeWidth="0.3"
-        className="font-[helvetica] font-bold fill-transparent text-7xl   stroke-neutral-200 dark:stroke-neutral-800"
+        strokeWidth="1.5"
+        className="font-[helvetica] font-bold fill-transparent stroke-neutral-200 dark:stroke-neutral-800"
+        fontSize="180"
         initial={{ strokeDashoffset: 1000, strokeDasharray: 1000 }}
         animate={{
           strokeDashoffset: 0,
@@ -117,9 +119,10 @@ export const TextHoverEffect = ({
         textAnchor="middle"
         dominantBaseline="middle"
         stroke="url(#textGradient)"
-        strokeWidth="0.3"
+        strokeWidth="1.5"
         mask="url(#textMask)"
-        className="font-[helvetica] font-bold fill-transparent text-7xl"
+        className="font-[helvetica] font-bold fill-transparent"
+        fontSize="180"
       >
         {text}
       </text>
