@@ -31,7 +31,7 @@ export function Footer() {
           <div>
             <h3 className="text-slate-900 dark:text-white font-bold mb-6 text-lg">Quick Links</h3>
             <ul className="space-y-4">
-              <li><Link href="#top" className="text-slate-600 dark:text-slate-400 hover:text-brand-blue dark:hover:text-brand-yellow font-medium text-sm transition-colors">Home</Link></li>
+              <li><Link href="#" className="text-slate-600 dark:text-slate-400 hover:text-brand-blue dark:hover:text-brand-yellow font-medium text-sm transition-colors">Home</Link></li>
               <li><Link href="/about" className="text-slate-600 dark:text-slate-400 hover:text-brand-blue dark:hover:text-brand-yellow font-medium text-sm transition-colors">About Us</Link></li>
               <li><Link href="/services" className="text-slate-600 dark:text-slate-400 hover:text-brand-blue dark:hover:text-brand-yellow font-medium text-sm transition-colors">Services</Link></li>
               <li><Link href="/careers" className="text-slate-600 dark:text-slate-400 hover:text-brand-blue dark:hover:text-brand-yellow font-medium text-sm transition-colors">Careers</Link></li>

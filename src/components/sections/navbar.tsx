@@ -42,11 +42,10 @@ export function Navbar({ className }: { className?: string }) {
         <div className="bg-white/95 dark:bg-[#1a1a1a]/95 shadow-[0_4px_24px_rgba(0,0,0,0.04)] rounded-full px-3 py-2.5 border border-black/5 dark:border-white/10 backdrop-blur-md">
           <Menu setActive={setActive}>
             <div className="flex items-center space-x-2 lg:space-x-4 text-base font-medium">
-              <HoveredLink href="#top">Home</HoveredLink>
+              <HoveredLink href="/">Home</HoveredLink>
+              <HoveredLink href="/about">About Us</HoveredLink>
               <HoveredLink href="/services">Services</HoveredLink>
-              <HoveredLink href="/our-work">Our Work</HoveredLink>
-              <HoveredLink href="/achievements">Achievements</HoveredLink>
-              <HoveredLink href="/faqs">FAQs</HoveredLink>
+              <HoveredLink href="/blogs">Blogs</HoveredLink>
               <HoveredLink href="/contact">Contact</HoveredLink>
             </div>
           </Menu>
@@ -85,8 +84,8 @@ export function Navbar({ className }: { className?: string }) {
           containerClassName="hidden md:inline-block w-fit p-[1px] rounded-full"
           gradientColors={["rgba(59,130,246,0.5)", "rgba(16,185,129,0.5)", "rgba(139,92,246,0.5)"]}
         >
-          <a 
-            href="#contact" 
+          <Link 
+            href="/contact" 
             className="flex items-center gap-2 h-full w-full cursor-pointer rounded-full bg-[#111] dark:bg-[#222] px-6 py-2.5 text-sm font-medium text-white shadow-xl transition-all duration-100 active:scale-95"
           >
             Schedule a Call
@@ -104,7 +103,7 @@ export function Navbar({ className }: { className?: string }) {
               <line x1="7" y1="17" x2="17" y2="7"></line>
               <polyline points="7 7 17 7 17 17"></polyline>
             </svg>
-          </a>
+          </Link>
         </NoiseBackground>
 
         {/* Mobile Hamburger Icon */}
@@ -130,18 +129,17 @@ export function Navbar({ className }: { className?: string }) {
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
         <div className="absolute top-[3.5rem] left-8 right-8 bg-white/95 dark:bg-[#1a1a1a]/95 shadow-[0_4px_24px_rgba(0,0,0,0.1)] rounded-2xl p-4 border border-black/5 dark:border-white/10 backdrop-blur-md md:hidden flex flex-col space-y-4">
-          <Link href="#top" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Home</Link>
+          <Link href="/" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Home</Link>
+          <Link href="/about" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">About Us</Link>
           <Link href="/services" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Services</Link>
-          <Link href="/our-work" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Our Work</Link>
-          <Link href="/achievements" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Achievements</Link>
-          <Link href="/faqs" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">FAQs</Link>
+          <Link href="/blogs" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Blogs</Link>
           <Link href="/contact" className="text-slate-800 dark:text-white font-medium px-4 py-2 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-lg">Contact</Link>
-          <a 
-            href="#contact" 
+          <Link 
+            href="/contact" 
             className="flex justify-center items-center gap-2 mt-4 cursor-pointer rounded-full bg-[#111] dark:bg-[#222] px-6 py-3 text-sm font-medium text-white shadow-xl transition-all duration-100 active:scale-95"
           >
             Schedule a Call
-          </a>
+          </Link>
         </div>
       )}
     </div>

@@ -18,8 +18,8 @@ export const StickyScroll = ({
   const [activeCard, setActiveCard] = React.useState(0);
   const ref = useRef<any>(null);
   const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start center", "end start"],
+    container: ref,
+    offset: ["start start", "end start"],
   });
   const cardLength = content.length;
 
@@ -63,8 +63,9 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="flex items-start justify-center relative space-x-10 rounded-md p-10"
+      className="h-[30rem] overflow-y-auto flex justify-center relative space-x-10 rounded-xl p-10 mt-8 scrollbar-hide"
       ref={ref}
+      style={{ msOverflowStyle: "none", scrollbarWidth: "none" }}
     >
       <div className="div relative flex items-start px-4">
         <div className="max-w-2xl">
@@ -100,7 +101,7 @@ export const StickyScroll = ({
       <div
         style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block h-80 w-[24rem] rounded-md bg-white sticky top-32 overflow-hidden",
+          "hidden lg:block h-[20rem] w-[24rem] rounded-md bg-white sticky top-10 overflow-hidden",
           contentClassName
         )}
       >
